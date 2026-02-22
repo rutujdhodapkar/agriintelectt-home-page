@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AgriIntellect</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  height: 100vh;
+  color: white;
+}
+
+/* HERO BACKGROUND */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("bg.jpeg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Dark overlay */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(5, 10, 25, 0.7),
+    rgba(5, 10, 25, 0.9)
+  );
+}
+
+/* NAVBAR */
+
+.navbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 60px;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.login {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: white;
+  color: black;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+/* HERO CONTENT */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  padding-bottom: 120px;
+}
+
+.users {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  opacity: 0.85;
+  font-size: 18px;
+  margin-bottom: 36px;
+}
+
+.demo-btn {
+  background: white;
+  color: black;
+  padding: 14px 26px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.demo-btn:hover {
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .navbar {
+    padding: 20px;
+  }
+
+  .hero-content {
+    padding: 0 20px 80px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+
+  <!-- NAVBAR -->
+
+  <div class="navbar">
+    <div class="logo">AgriIntellect</div>
+
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">Resources</a>
+      <a href="#">Pricing</a>
+    </div>
+
+    <div class="actions">
+      <button class="btn-primary" onclick="window.location.href='https://agriintellect.streamlit.app/'">Start Free →</button>
+    </div>
+  </div>
+
+  <!-- HERO TEXT -->
+
+  <div class="hero-content">
+    <div class="users">👥 To increase profit of farmers</div>
+
+    <h1>AI That Thinks With<br>farmers, and For farmers</h1>
+
+    <div class="subtitle">
+      AgriIntellect helps farmers increase networth with sustainablity
+    </div>
+
+    <button class="demo-btn" onclick="window.location.href='https://agriintellect.streamlit.app/'">Request Demo →</button>
+  </div>
+
+</div>
+
+</body>
+</html>
